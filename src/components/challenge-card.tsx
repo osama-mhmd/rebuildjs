@@ -12,7 +12,9 @@ export default function ChallengeCard({
       className="rounded-md border border-muted p-4 transition hover:bg-muted/50 cursor-pointer"
       {...props}
     >
-      <h3>{name}</h3>
+      <h3>
+        <span className="text-gray-600">rebuild</span> {name}
+      </h3>
       <p className="text-muted-foreground">{description}</p>
       <p className="pt-4 flex gap-1">
         {tags.map((tag, index) => {

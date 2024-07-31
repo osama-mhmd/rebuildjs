@@ -1,4 +1,6 @@
 import ChallengeCard from "@/components/challenge-card";
+import Code from "@/components/code";
+import challenges from "./challenges";
 
 export default function Home() {
   return (
@@ -15,16 +17,22 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="container">
-          <h2 className="pb-5">Fire Challenges 🔥</h2>
-          <ChallengeCard
-            name={<>Make like swup</>}
-            description="An animation library that prefetchs the pages and makes animations between them"
-            type="fire"
-            hints={[<>Test</>]}
-            solution=""
-            tags={["animation", "dom"]}
-          />
+        <div className="container flex flex-col gap-3">
+          <h2>Fire Challenges 🔥</h2>
+          {challenges.map((challenge, index) => {
+            return (
+              <ChallengeCard
+                name={challenge.name}
+                description={challenge.description}
+                type={challenge.type}
+                steps={challenge.steps}
+                hints={challenge.hints}
+                solution={challenge.solution}
+                tags={challenge.tags}
+                key={`challenge-${index}`}
+              />
+            );
+          })}
         </div>
       </section>
     </main>
