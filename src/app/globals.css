@@ -6,7 +6,11 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background: #030712;
+
     --gold: #ffdf2b;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
   }
 }
 
@@ -23,5 +27,13 @@ body {
 }
 
 h1 {
-  @apply text-6xl font-bold;
+  @apply text-6xl font-bold py-4;
+}
+
+h2 {
+  @apply text-4xl font-semibold py-3;
+}
+
+h3 {
+  @apply text-2xl font-medium py-2;
 }
