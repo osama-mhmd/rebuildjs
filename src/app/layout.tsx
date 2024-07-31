@@ -16,7 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <footer className="text-center p-6 mt-4">
+          Made by{" "}
+          <a className="font-bold" href="https://os-mhmd.vercel.app">
+            Osama Mohammed
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }
