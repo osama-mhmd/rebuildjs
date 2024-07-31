@@ -26,6 +26,18 @@ body {
   }
 }
 
+/* scroll bar */
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
 h1 {
   @apply text-6xl font-bold py-4;
 }
