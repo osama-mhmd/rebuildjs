@@ -27,6 +27,7 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         background: "var(--background)",
+        foreground: "var(--foreground)",
       },
     },
   },

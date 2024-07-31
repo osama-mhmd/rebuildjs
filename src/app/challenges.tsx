@@ -23,7 +23,10 @@ const challenges: Challenge[] = [
     description: (
       <>
         A function offered by many libraries like the <Code>alert()</Code>{" "}
-        function
+        function, that shows a message like{" "}
+        <a href="https://ui.shadcn.com/docs/components/toast">
+          Toast - shadcn/ui
+        </a>
       </>
     ),
     tags: ["animation", "rebuild-component"],
@@ -42,9 +45,16 @@ const challenges: Challenge[] = [
     name: <Code>{"<Link>"}</Code>,
     description: (
       <>
-        A component found in nextjs, and react-router-dom, that prefetchs the
-        page your are going to and replaces the content of the page with the new
-        content
+        A component found in{" "}
+        <a href="https://nextjs.org/docs/pages/api-refrence/components/link">
+          next/link
+        </a>
+        , and{" "}
+        <a href="https://reactrouter.com/en/main/components/link">
+          react-router-dom - Link
+        </a>
+        , that prefetchs the page your are going to and replaces the content of
+        the page with the new content
       </>
     ),
     tags: ["animation", "fetch", "rebuild-component"],

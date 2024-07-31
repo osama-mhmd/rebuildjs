@@ -19,11 +19,7 @@ export default function ChallengeCard({
       <p className="pt-4 flex gap-1 flex-wrap">
         {tags.map((tag, index) => {
           return (
-            <a
-              href="/test"
-              key={index}
-              className="px-4 py-1 rounded-2xl bg-muted"
-            >
+            <a key={index} className="px-4 py-1 nota rounded-2xl bg-muted">
               {tag}
             </a>
           );
