@@ -16,7 +16,7 @@ export default function ChallengeCard({
         <span className="text-gray-600">rebuild</span> {name}
       </h3>
       <p className="text-muted-foreground">{description}</p>
-      <p className="pt-4 flex gap-1">
+      <p className="pt-4 flex gap-1 flex-wrap">
         {tags.map((tag, index) => {
           return (
             <a
