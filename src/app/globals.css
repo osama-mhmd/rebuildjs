@@ -59,6 +59,16 @@ a {
   @apply no-underline text-foreground;
 }
 
+/* accent button */
 .accent-b {
   @apply rounded-md p-3 px-6 hover:bg-muted transition w-fit;
+}
+
+hr {
+  @apply border-gray-600;
+}
+
+/* tag */
+.tag {
+  @apply px-4 py-1 nota rounded-2xl bg-background;
 }

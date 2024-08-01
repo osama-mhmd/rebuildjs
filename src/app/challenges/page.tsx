@@ -1,12 +1,31 @@
-import challenges from "@/app/challenges";
-import ChallengeCard from "@/components/challenge-card";
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Challenges - rebuildjs",
+import challenges from "@/app/challenges";
+import Challenge from "@/challenge";
+import ChallengeCard from "@/components/challenge-card";
+import DetailedChallenge from "@/components/detailed-challenge";
+import { useState } from "react";
+
+const emptyChallenge: Challenge = {
+  name: "",
+  description: "",
+  tags: [],
+  deps: [],
+  steps: [],
+  type: "fire",
+  hints: [],
+  solution: "",
 };
 
 export default function ChallengesPage() {
+  const [challenge, setChallenge] = useState<Challenge>(emptyChallenge);
+  const [isOpeningCard, setIsOpeningCard] = useState(false);
+
+  function openCard(challenge: Challenge) {
+    setIsOpeningCard(true);
+    setChallenge(challenge);
+  }
+
   return (
     <main className="flex flex-col gap-14">
       <section>
@@ -26,11 +45,18 @@ export default function ChallengesPage() {
                 hints={challenge.hints}
                 solution={challenge.solution}
                 tags={challenge.tags}
+                onClick={() => openCard(challenge)}
                 key={`challenge-${index}`}
               />
             );
           })}
         </div>
+        {isOpeningCard && (
+          <DetailedChallenge
+            challenge={challenge}
+            closePanel={() => setIsOpeningCard(false)}
+          />
+        )}
       </section>
     </main>
   );
