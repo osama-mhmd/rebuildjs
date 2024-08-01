@@ -58,3 +58,7 @@ a {
 .nota {
   @apply no-underline text-foreground;
 }
+
+.accent-b {
+  @apply rounded-md p-3 px-6 hover:bg-muted transition w-fit;
+}

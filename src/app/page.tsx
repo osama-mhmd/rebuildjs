@@ -1,10 +1,11 @@
 import ChallengeCard from "@/components/challenge-card";
-import Code from "@/components/code";
 import challenges from "./challenges";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-12">
+    <main className="flex flex-col gap-14">
       <section>
         <div className="container flex flex-col gap-4 text-center items-center pt-24">
           <h1>
@@ -33,6 +34,9 @@ export default function Home() {
               />
             );
           })}
+          <Link href="/challenges" className="mx-auto flex gap-1 nota accent-b">
+            Show more <ArrowRight />
+          </Link>
         </div>
       </section>
     </main>
