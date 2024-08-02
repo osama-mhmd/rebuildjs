@@ -86,6 +86,28 @@ const challenges: Challenge[] = [
     hints: [],
     solution: undefined,
   },
+  {
+    name: <a href="https://npmjs.com/react-color">react-color</a>,
+    description: (
+      <>
+        A library that makes a color-pallete with tons of colors your can choose. 
+        Also these libraries:{" "}
+        <a href="https://npmjs.com/react-colorful">react-colorful</a>, and{" "}
+        <a href="https://npmjs.com/react-color-pallete">react-color-pallete</a> makes the same
+        idea.
+      </>
+    ),
+    tags: ["popover", "color", "rebuild-library"],
+    steps: [
+      "Make a component and call it ColorPallete",
+      "Display the pallete",
+      "Make sure that the user can access all the colors",
+      "Implement `onChange()` function, so the developer can access the color",
+    ],
+    type: "storm",
+    hints: [],
+    solution: undefined,
+  },
 ];
 
 export default challenges;
