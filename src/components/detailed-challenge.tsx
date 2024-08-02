@@ -13,10 +13,10 @@ export default function DetailedChallenge({
   return (
     <>
       <div className="absolute top-0 w-full z-10">
-        <div className="container flex flex-col gap-3 py-6 bg-muted sm:mt-8 sm:rounded-md shadow-gray-600">
+        <div className="container flex flex-col gap-3 py-6 border border-muted bg-background sm:mt-8 sm:rounded-md shadow-gray-600">
           <div>
             <X
-              className="p-2 float-end hover:bg-background rounded-full transition cursor-pointer"
+              className="p-2 float-end hover:bg-muted/55 rounded-full transition cursor-pointer"
               width={40}
               height={40}
               onClick={closePanel}

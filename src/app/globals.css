@@ -70,5 +70,5 @@ hr {
 
 /* tag */
 .tag {
-  @apply px-4 py-1 nota rounded-2xl bg-background;
+  @apply px-4 py-1 nota rounded-2xl bg-muted;
 }
