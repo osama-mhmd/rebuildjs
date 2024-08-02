@@ -110,12 +110,7 @@ const challenges: Challenge[] = [
   },
   {
     name: <a href="https://freecodecamp.org/news/routing-in-nextjs/">nextjs app router</a>,
-    description: (
-      <>
-        The new routing technique in nextjs is app routing where the main page ("/") found in
-        "/app/page.tsx" and the about page ("/about") in "/app/about/page.tsx"
-      </>
-    ),
+    description: 'The new routing technique in nextjs is app routing where the main page ("/") found in "/app/page.tsx" and the about page ("/about") in "/app/about/page.tsx"',
     tags: ["routing", "file-system", "rebuild-technique"],
     steps: [
       "...",
