@@ -48,7 +48,10 @@ export default function ChallengesPage() {
                 hints={challenge.hints}
                 solution={challenge.solution}
                 tags={challenge.tags}
-                onClick={() => openCard(challenge)}
+                onClick={() => {
+                  openCard(challenge);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 key={`challenge-${index}`}
               />
             );
