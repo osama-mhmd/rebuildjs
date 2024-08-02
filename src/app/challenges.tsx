@@ -1,5 +1,4 @@
 import Challenge from "@/challenge";
-import Code from "@/components/code";
 
 const challenges: Challenge[] = [
   {
@@ -19,10 +18,10 @@ const challenges: Challenge[] = [
     solution: undefined,
   },
   {
-    name: <Code>toast()</Code>,
+    name: <code>toast()</code>,
     description: (
       <>
-        A function offered by many libraries like the <Code>alert()</Code>{" "}
+        A function offered by many libraries like the <code>alert()</code>{" "}
         function, that shows a message like{" "}
         <a href="https://ui.shadcn.com/docs/components/toast">
           Toast - shadcn/ui
@@ -42,7 +41,7 @@ const challenges: Challenge[] = [
     solution: undefined,
   },
   {
-    name: <Code>{"<Link>"}</Code>,
+    name: <code>{"<Link>"}</code>,
     description: (
       <>
         A component found in{" "}
