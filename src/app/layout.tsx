@@ -6,7 +6,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Homepage - rebuildjs",
-  description: "Enhance your coding skills by deconstructing and reconstructing some powerful tools, and gain a deeper mastery of Javascript",
+  description:
+    "Enhance your coding skills by deconstructing and reconstructing some powerful tools, and gain a deeper mastery of Javascript",
+  openGraph: {
+    images: "/rebuildjs.jpg",
+  },
 };
 
 export default function RootLayout({
