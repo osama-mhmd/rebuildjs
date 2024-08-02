@@ -2,6 +2,7 @@
 
 import Challenge from "@/challenge";
 import { X } from "lucide-react";
+import { cn } from '@/utils'
 
 export default function DetailedChallenge({
   challenge,
@@ -13,7 +14,12 @@ export default function DetailedChallenge({
   return (
     <>
       <div className="absolute top-0 w-full z-10">
-        <div className="container flex flex-col gap-3 py-6 border border-muted bg-background sm:mt-8 sm:rounded-md shadow-gray-600">
+        <div 
+          className={cn(
+            "container flex flex-col gap-3 py-6 border bg-background sm:mt-8 sm:rounded-md shadow-gray-600",
+            challenge.type == "fire" ? "border-gold" : "border-muted"
+          )}
+        >
           <div>
             <X
               className="p-2 float-end hover:bg-muted/55 rounded-full transition cursor-pointer"

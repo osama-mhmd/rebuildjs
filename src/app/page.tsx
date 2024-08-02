@@ -3,6 +3,8 @@ import challenges from "./challenges";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+const limit = 4;
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-14">
@@ -20,7 +22,7 @@ export default function Home() {
       <section>
         <div className="container flex flex-col gap-3">
           <h2>Fire Challenges 🔥</h2>
-          {challenges.map((challenge, index) => {
+          {challenges.slice(0, limit).map((challenge, index) => {
             return (
               <ChallengeCard
                 name={challenge.name}

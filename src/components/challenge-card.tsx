@@ -9,7 +9,7 @@ export default function ChallengeCard({
 }: Challenge & HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className="rounded-md border border-muted p-4 transition hover:bg-muted/50 cursor-pointer"
+      className="rounded-md border border-muted p-4 transition hover:bg-muted/20 cursor-pointer"
       {...props}
     >
       <h3>
