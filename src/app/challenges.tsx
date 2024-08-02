@@ -67,6 +67,25 @@ const challenges: Challenge[] = [
     hints: [],
     solution: undefined,
   },
+  {
+    name: <a href="https://npmjs.com/html2canvas">html2canvas</a>,
+    description: (
+      <>
+        A library that screenshoot the DOM and make an image, also the library{" "}
+        <a href="https://npmjs.com/html-to-img">html-to-img</a> makes the same
+        idea, but they can download the image as a SVG.
+      </>
+    ),
+    tags: ["dom", "canvas", "rebuild-library"],
+    steps: [
+      "Make sure that the font-family works in your image",
+      "Enable the developer to pass some arguments to style to the element",
+      "Make sure that the image can downloaded",
+    ],
+    type: "fire",
+    hints: [],
+    solution: undefined,
+  },
 ];
 
 export default challenges;
