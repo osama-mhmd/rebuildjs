@@ -16,7 +16,7 @@ export default function DetailedChallenge({
       <div className="absolute top-0 w-full z-10">
         <div 
           className={cn(
-            "container flex flex-col gap-3 py-6 border bg-background sm:mt-8 sm:rounded-md shadow-gray-600",
+            "container flex flex-col gap-3 py-6 border-b sm:border bg-background sm:mt-8 sm:rounded-md shadow-gray-600",
             challenge.type == "fire" ? "border-gold" : "border-muted"
           )}
         >
