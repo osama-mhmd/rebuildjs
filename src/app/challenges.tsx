@@ -5,11 +5,11 @@ const challenges: Challenge[] = [
   {
     name: <a href="https://swup.js.org">swup</a>,
     description:
-      "An animation library that prefetchs the pages and makes animations between them",
+      "An animation library that prefetchs the pages and makes transitions between them",
     tags: ["animation", "dom", "fetch", "rebuild-library"],
     steps: [
-      "Make a component the prefetches the link you are going to",
-      "Then, try to replace the content of the page with the new content",
+      "Make a component the prefetches the page you are going to",
+      "Then, try to replace the content of the current page with the new content",
       "After that, push the changes to the history",
       "Finally, try to make a transition between them",
     ],
@@ -54,13 +54,13 @@ const challenges: Challenge[] = [
           react-router-dom - Link
         </a>
         , that prefetchs the page your are going to and replaces the content of
-        the page with the new content
+        the current page with the new content
       </>
     ),
     tags: ["animation", "fetch", "rebuild-component"],
     steps: [
-      "Make a component the prefetches the link you are going to",
-      "Then, try to replace the content of the page with the new content",
+      "Make a component the prefetches the page you are going to",
+      "Then, try to replace the content of the current page with the new content",
       "After that, push the changes to the history",
     ],
     type: "storm",
