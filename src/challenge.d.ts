@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 
 type Challenge = {
-  name: string | ReactNode;
+  name: string;
   description: string | ReactNode;
+  link?: string;
   tags: string[];
   deps?: string[]; // will change
   // deps: is the challenges we recommend to do first

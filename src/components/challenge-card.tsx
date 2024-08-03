@@ -1,30 +1,32 @@
 import Challenge from "@/challenge";
-import { HTMLAttributes } from "react";
+import Link from "next/link";
+import { AnchorHTMLAttributes, HTMLAttributes } from "react";
 
 export default function ChallengeCard({
   name,
   description,
   tags,
   ...props
-}: Challenge & HTMLAttributes<HTMLDivElement>) {
+}: Challenge & AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
-    <div
-      className="rounded-md border border-muted p-4 transition hover:bg-muted/20 cursor-pointer"
+    <Link
+      className="nota rounded-md border border-muted p-4 transition hover:bg-muted/20 cursor-pointer"
+      href={`/challenges/${name.replace(" ", "-")}`}
       {...props}
     >
       <h3>
         <span className="text-gray-600">rebuild</span> {name}
       </h3>
-      <p className="text-muted-foreground">{description}</p>
-      <p className="pt-4 flex gap-1 flex-wrap">
+      <span className="text-muted-foreground">{description}</span>
+      <span className="pt-4 flex gap-1 flex-wrap">
         {tags.map((tag, index) => {
           return (
-            <a key={index} className="tag">
+            <span key={index} className="tag">
               {tag}
-            </a>
+            </span>
           );
         })}
-      </p>
-    </div>
+      </span>
+    </Link>
   );
 }

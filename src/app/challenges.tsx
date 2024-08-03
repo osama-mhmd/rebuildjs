@@ -2,9 +2,10 @@ import Challenge from "@/challenge";
 
 const challenges: Challenge[] = [
   {
-    name: <a href="https://swup.js.org">swup</a>,
+    name: "swup",
     description:
       "An animation library that prefetchs the pages and makes transitions between them",
+    link: "https://swup.js.org",
     tags: ["animation", "dom", "fetch", "rebuild-library"],
     steps: [
       "Make a component the prefetches the page you are going to",
@@ -12,23 +13,19 @@ const challenges: Challenge[] = [
       "After that, push the changes to the history",
       "Finally, try to make a transition between them",
     ],
-    deps: ["link"],
+    deps: ["link-component"],
     type: "storm",
     hints: [],
     solution: undefined,
   },
   {
-    name: <code>toast()</code>,
-    description: (
-      <>
-        A function offered by many libraries like the <code>alert()</code>{" "}
-        function, that shows a message like{" "}
-        <a href="https://ui.shadcn.com/docs/components/toast">
-          Toast - shadcn/ui
-        </a>
-      </>
-    ),
+    name: "toast message",
+    description: `
+      A function offered by many libraries like the \`alert()\`
+      function, that shows a message like shadcn/ui
+    `,
     tags: ["animation", "rebuild-component"],
+    link: "https://ui.shadcn.com/docs/components/toast",
     steps: [
       "Make a component and name it 'Toast'",
       "Also make a function 'toast()' that call the component",
@@ -41,21 +38,12 @@ const challenges: Challenge[] = [
     solution: undefined,
   },
   {
-    name: <code>{"<Link>"}</code>,
-    description: (
-      <>
-        A component found in{" "}
-        <a href="https://nextjs.org/docs/pages/api-refrence/components/link">
-          next/link
-        </a>
-        , and{" "}
-        <a href="https://reactrouter.com/en/main/components/link">
-          react-router-dom - Link
-        </a>
-        , that prefetchs the page your are going to and replaces the content of
-        the current page with the new content
-      </>
-    ),
+    name: "link component",
+    description: `
+      A component found in nextjs, and react-router-dom, 
+      that prefetchs the page your are going to and replaces the content of
+      the current page with the new content
+    `,
     tags: ["animation", "fetch", "rebuild-component"],
     steps: [
       "Make a component the prefetches the page you are going to",
@@ -67,15 +55,13 @@ const challenges: Challenge[] = [
     solution: undefined,
   },
   {
-    name: <a href="https://npmjs.com/html2canvas">html2canvas</a>,
-    description: (
-      <>
-        A library that screenshoot the DOM and make an image, also the library{" "}
-        <a href="https://npmjs.com/html-to-img">html-to-img</a> makes the same
-        idea, but they can download the image as a SVG.
-      </>
-    ),
+    name: "html2canvas",
+    description: `
+      A library that screenshoot the DOM and make an image, also the library html-to-img 
+      makes the same idea, but they can download the image as a SVG.
+    `,
     tags: ["dom", "canvas", "rebuild-library"],
+    link: "https://npmjs.com/html2canvas",
     steps: [
       "Make sure that the font-family works in your image",
       "Enable the developer to pass some arguments to style to the element",
@@ -86,17 +72,14 @@ const challenges: Challenge[] = [
     solution: undefined,
   },
   {
-    name: <a href="https://npmjs.com/react-color">react-color</a>,
-    description: (
-      <>
-        A library that makes a color-pallete with tons of colors your can choose. 
-        Also these libraries:{" "}
-        <a href="https://npmjs.com/react-colorful">react-colorful</a>, and{" "}
-        <a href="https://npmjs.com/react-color-pallete">react-color-pallete</a> makes the same
-        idea.
-      </>
-    ),
+    name: "react-color",
+    description: `
+      A library that makes a color-pallete with tons of colors your can
+      choose. Also these libraries: react-colorful, and 
+      react-color-pallete makes the same idea.
+    `,
     tags: ["popover", "color", "rebuild-library"],
+    link: "https://npmjs.com/react-color",
     steps: [
       "Make a component and call it ColorPallete",
       "Display the pallete",
@@ -108,13 +91,13 @@ const challenges: Challenge[] = [
     solution: undefined,
   },
   {
-    name: <a href="https://freecodecamp.org/news/routing-in-nextjs/">nextjs app router</a>,
-    description: 'The new routing technique in nextjs is app routing where the main page ("/") found in "/app/page.tsx" and the about page ("/about") in "/app/about/page.tsx"',
+    name: "nextjs app router",
+    description:
+      'The new routing technique in nextjs is app routing where the main page ("/") found in "/app/page.tsx" and the about page ("/about") in "/app/about/page.tsx"',
     tags: ["routing", "file-system", "rebuild-technique"],
-    steps: [
-      "...",
-    ],
+    steps: ["..."],
     type: "storm",
+    link: "https://freecodecamp.org/news/routing-in-nextjs/",
     hints: [],
     solution: undefined,
   },
