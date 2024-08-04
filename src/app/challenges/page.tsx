@@ -1,7 +1,24 @@
+"use client";
+
 import challenges from "@/app/challenges";
 import ChallengeCard from "@/components/challenge-card";
+import { useRef, useState } from "react";
 
 export default function ChallengesPage() {
+  const inputRef = useRef(null);
+  const [challengesToLoop, setChallenges] = useState(challenges);
+
+  const search = () => {
+    setChallenges(
+      challenges.filter((challenge) =>
+        challenge.name
+          .toLowerCase()
+          .includes((inputRef.current! as HTMLInputElement).value.toLowerCase())
+      )
+    );
+    // TODO: Searching according to description
+  };
+
   return (
     <main className="flex flex-col gap-14">
       <section>
@@ -11,7 +28,16 @@ export default function ChallengesPage() {
       </section>
       <section>
         <div className="container flex flex-col gap-3">
-          {challenges.map((challenge, index) => {
+          <div>
+            <input
+              className="w-80"
+              onKeyUp={search}
+              ref={inputRef}
+              placeholder="Search..."
+            />
+            {/* <button onClick={filter}>filter</button> */}
+          </div>
+          {challengesToLoop.map((challenge, index) => {
             return (
               <ChallengeCard
                 name={challenge.name}
@@ -22,6 +48,11 @@ export default function ChallengesPage() {
               />
             );
           })}
+          {!challengesToLoop.length && (
+            <p className="text-center text-muted-foreground font-bold">
+              No challenges found
+            </p>
+          )}
         </div>
       </section>
     </main>

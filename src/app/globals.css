@@ -76,3 +76,11 @@ hr {
 code {
   @apply rounded-lg bg-gray-900 py-1 px-2;
 }
+
+input {
+  @apply bg-transparent border border-muted py-2 px-3 rounded-md focus:outline-0;
+}
+
+button {
+  @apply bg-gray-200 py-2 px-4 text-black rounded-md hover:bg-gray-200/90 transition;
+}
