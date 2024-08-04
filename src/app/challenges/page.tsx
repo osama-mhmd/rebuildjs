@@ -9,14 +9,17 @@ export default function ChallengesPage() {
   const [challengesToLoop, setChallenges] = useState(challenges);
 
   const search = () => {
+    const inputValue = (
+      inputRef.current! as HTMLInputElement
+    ).value.toLowerCase();
+
     setChallenges(
-      challenges.filter((challenge) =>
-        challenge.name
-          .toLowerCase()
-          .includes((inputRef.current! as HTMLInputElement).value.toLowerCase())
+      challenges.filter(
+        (challenge) =>
+          challenge.name.toLowerCase().includes(inputValue) ||
+          challenge.description.toLowerCase().includes(inputValue)
       )
     );
-    // TODO: Searching according to description
   };
 
   return (
