@@ -17,9 +17,6 @@ export default function ChallengesPage() {
                 name={challenge.name}
                 description={challenge.description}
                 type={challenge.type}
-                steps={challenge.steps}
-                hints={challenge.hints}
-                solution={challenge.solution}
                 tags={challenge.tags}
                 key={`challenge-${index}`}
               />

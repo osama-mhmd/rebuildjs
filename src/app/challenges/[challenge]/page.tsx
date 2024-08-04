@@ -51,7 +51,7 @@ export default function Challenge({
           </div>
         </section>
         <section>
-          <div className="container pt-2">
+          <div className="container py-2">
             <h2>Constrains</h2>
             <ul className="list-disc px-4">
               {challenge.steps.map((step, index) => {
@@ -62,6 +62,26 @@ export default function Challenge({
                 );
               })}
             </ul>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <hr />
+            {challenge.hints && (
+              <>
+                <h2>Hints</h2>
+                <ul className="list-disc px-4">
+                  {challenge.hints.map((hint, index) => {
+                    return <li key={index}>{hint}</li>;
+                  })}
+                </ul>
+              </>
+            )}
+            {!challenge.hints && (
+              <p className="text-center text-muted-foreground font-bold">
+                no hints for this problem
+              </p>
+            )}
           </div>
         </section>
       </main>

@@ -65,7 +65,7 @@ a {
 }
 
 hr {
-  @apply border-gray-600;
+  @apply border-gray-600 my-2;
 }
 
 /* tag */

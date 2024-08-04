@@ -15,8 +15,6 @@ const challenges: Challenge[] = [
     ],
     deps: ["link-component"],
     type: "storm",
-    hints: [],
-    solution: undefined,
   },
   {
     name: "toast message",
@@ -34,8 +32,6 @@ const challenges: Challenge[] = [
       "Make sure that your application works with multiple toast runs at the same time",
     ],
     type: "water",
-    hints: [],
-    solution: undefined,
   },
   {
     name: "link component",
@@ -51,8 +47,6 @@ const challenges: Challenge[] = [
       "After that, push the changes to the history",
     ],
     type: "storm",
-    hints: [],
-    solution: undefined,
   },
   {
     name: "html2canvas",
@@ -68,8 +62,6 @@ const challenges: Challenge[] = [
       "Make sure that the image can downloaded",
     ],
     type: "fire",
-    hints: [],
-    solution: undefined,
   },
   {
     name: "react-color",
@@ -87,8 +79,6 @@ const challenges: Challenge[] = [
       "Implement `onChange()` function, so the developer can access the color",
     ],
     type: "storm",
-    hints: [],
-    solution: undefined,
   },
   {
     name: "nextjs app router",
@@ -98,8 +88,6 @@ const challenges: Challenge[] = [
     steps: ["..."],
     type: "storm",
     link: "https://freecodecamp.org/news/routing-in-nextjs/",
-    hints: [],
-    solution: undefined,
   },
 ];
 

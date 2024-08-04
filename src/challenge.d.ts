@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type Challenge = {
   name: string;
-  description: string | ReactNode;
+  description: string;
   link?: string;
   tags: string[];
   deps?: string[]; // will change
@@ -12,8 +12,8 @@ type Challenge = {
   // fire: Diff: Hard
   // storm: Diff: Medium
   // water: Diff: Easy
-  hints: (string | ReactNode)[];
-  solution: ReactNode;
+  hints?: (string | ReactNode)[];
+  solution?: ReactNode;
 };
 
 export default Challenge;

@@ -1,17 +1,25 @@
 import Challenge from "@/challenge";
 import Link from "next/link";
-import { AnchorHTMLAttributes, HTMLAttributes } from "react";
+import { AnchorHTMLAttributes } from "react";
+
+type ChallengeCardProps = {
+  name: Challenge["name"];
+  description: Challenge["description"];
+  tags: Challenge["tags"];
+  type: Challenge["type"];
+} & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export default function ChallengeCard({
   name,
   description,
   tags,
+  type,
   ...props
-}: Challenge & AnchorHTMLAttributes<HTMLAnchorElement>) {
+}: ChallengeCardProps) {
   return (
     <Link
       className="nota rounded-md border border-muted p-4 transition hover:bg-muted/20 cursor-pointer"
-      href={`/challenges/${name.replace(" ", "-")}`}
+      href={`/challenges/${name.replaceAll(" ", "-")}`}
       {...props}
     >
       <h3>
