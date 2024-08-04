@@ -11,9 +11,6 @@ export default function ChallengesPage() {
       </section>
       <section>
         <div className="container flex flex-col gap-3">
-          <span className="text-center font-semibold text-muted-foreground">
-            Click to show the challenge in details
-          </span>
           {challenges.map((challenge, index) => {
             return (
               <ChallengeCard
