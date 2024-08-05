@@ -21,12 +21,18 @@ export default function Home() {
       </section>
       <section>
         <div className="container flex flex-col gap-3">
-          <h2>Fire Challenges 🔥</h2>
-          {challenges.slice(0, limit).map((challenge, index) => {
-            return (
-              <ChallengeCard challenge={challenge} key={`challenge-${index}`} />
-            );
-          })}
+          <h2>Recent Challenges ⏳</h2>
+          {challenges
+            .reverse()
+            .slice(0, limit)
+            .map((challenge, index) => {
+              return (
+                <ChallengeCard
+                  challenge={challenge}
+                  key={`challenge-${index}`}
+                />
+              );
+            })}
           <Link href="/challenges" className="mx-auto flex gap-1 nota accent-b">
             Show more <ArrowRight />
           </Link>
