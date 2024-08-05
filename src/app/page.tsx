@@ -24,13 +24,7 @@ export default function Home() {
           <h2>Fire Challenges 🔥</h2>
           {challenges.slice(0, limit).map((challenge, index) => {
             return (
-              <ChallengeCard
-                name={challenge.name}
-                description={challenge.description}
-                type={challenge.type}
-                tags={challenge.tags}
-                key={`challenge-${index}`}
-              />
+              <ChallengeCard challenge={challenge} key={`challenge-${index}`} />
             );
           })}
           <Link href="/challenges" className="mx-auto flex gap-1 nota accent-b">
