@@ -22,7 +22,9 @@ export default function ChallengeCard({
       className={cn(
         "nota rounded-md border border-muted p-4 transition cursor-pointer",
         type == "fire" ? "border-gold bg-low-gold" : "hover:bg-muted/20",
-        weaklyChallenge ? "bg-cyan-950/30 border-cyan-900" : ""
+        weaklyChallenge
+          ? "bg-blue-950/30 border-blue-900 hover:bg-blue-950/40"
+          : ""
       )}
       href={`/challenges/${name.replaceAll(" ", "-")}`}
       {...props}
