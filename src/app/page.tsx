@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-14">
       <section>
-        <div className="container flex flex-col gap-4 text-center items-center pt-24">
+        <div className="container flex flex-col gap-2 text-center items-center pt-24">
           <h1>
             rebuild<span className="underline text-gold">js</span>
           </h1>
@@ -46,7 +46,7 @@ export default function Home() {
         <div className="container flex flex-col gap-3">
           <h2>Weakly Challenges 📅</h2>
           <div className="bg-gray-900 border border-gray-200 rounded-md p-4 px-6">
-            <h3>New challenge 🎯 every Wednesday...</h3>
+            <h3 id="weakly-challenges">New challenge 🎯 every Wednesday...</h3>
           </div>
           {weaklyChallenges.reverse().map((challenge, index) => {
             return (

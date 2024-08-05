@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <footer className="text-center p-6 mt-4">
-          Made by{" "}
-          <a className="font-bold" href="https://os-mhmd.vercel.app">
-            Osama Mohammed
-          </a>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

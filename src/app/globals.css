@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --foreground: #ffffff;
@@ -49,6 +53,10 @@ h2 {
 
 h3 {
   @apply text-2xl font-medium py-2;
+}
+
+h4 {
+  @apply text-xl py-1;
 }
 
 a {
