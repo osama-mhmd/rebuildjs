@@ -14,6 +14,7 @@ type Challenge = {
   // water: Diff: Easy
   hints?: (string | ReactNode)[];
   solution?: ReactNode;
+  weaklyChallenge?: number;
 };
 
 export default Challenge;

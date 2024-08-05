@@ -43,10 +43,11 @@ export default function ChallengesPage() {
           {challengesToLoop.map((challenge, index) => {
             return (
               <ChallengeCard
-                name={challenge.name}
-                description={challenge.description}
-                type={challenge.type}
-                tags={challenge.tags}
+                // name={challenge.name}
+                // description={challenge.description}
+                // type={challenge.type}
+                // tags={challenge.tags}
+                challenge={challenge}
                 key={`challenge-${index}`}
               />
             );

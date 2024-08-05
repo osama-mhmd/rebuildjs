@@ -22,6 +22,7 @@ const config: Config = {
       },
       colors: {
         gold: "var(--gold)",
+        "low-gold": "var(--low-gold)",
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
