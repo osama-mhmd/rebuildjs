@@ -5,6 +5,10 @@ import { ArrowRight } from "lucide-react";
 
 const limit = 4;
 
+const weaklyChallenges = challenges.filter(
+  (challenge) => challenge.weaklyChallenge
+);
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-14">
@@ -36,6 +40,22 @@ export default function Home() {
           <Link href="/challenges" className="mx-auto flex gap-1 nota accent-b">
             Show more <ArrowRight />
           </Link>
+        </div>
+      </section>
+      <section>
+        <div className="container flex flex-col gap-3">
+          <h2>Weakly Challenges 📅</h2>
+          <div className="bg-gray-900 border border-gray-200 rounded-md p-4 px-6">
+            <h3>New challenge 🎯 every Wednesday...</h3>
+          </div>
+          {weaklyChallenges.reverse().map((challenge, index) => {
+            return (
+              <ChallengeCard challenge={challenge} key={`challenge-${index}`} />
+            );
+          })}
+          {!weaklyChallenges.length && (
+            <p className="tip">No weakly challenges yet 😞</p>
+          )}
         </div>
       </section>
     </main>

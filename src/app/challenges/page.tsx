@@ -46,9 +46,7 @@ export default function ChallengesPage() {
             );
           })}
           {!challengesToLoop.length && (
-            <p className="text-center text-muted-foreground font-bold">
-              No challenges found
-            </p>
+            <p className="tip">No challenges found</p>
           )}
         </div>
       </section>

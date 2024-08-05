@@ -85,3 +85,7 @@ input {
 button {
   @apply bg-gray-200 py-2 px-4 text-black rounded-md hover:bg-gray-200/90 transition;
 }
+
+.tip {
+  @apply text-center text-muted-foreground font-bold;
+}
