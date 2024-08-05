@@ -5,9 +5,11 @@ import { ArrowRight } from "lucide-react";
 
 const limit = 4;
 
-const weaklyChallenges = challenges.filter(
-  (challenge) => challenge.weaklyChallenge
-);
+const weaklyChallenges = challenges
+  .filter((challenge) => challenge.weaklyChallenge)
+  .reverse();
+
+const recentChallenges = challenges.reverse();
 
 export default function Home() {
   return (
@@ -26,17 +28,11 @@ export default function Home() {
       <section>
         <div className="container flex flex-col gap-3">
           <h2>Recent Challenges ⏳</h2>
-          {challenges
-            .reverse()
-            .slice(0, limit)
-            .map((challenge, index) => {
-              return (
-                <ChallengeCard
-                  challenge={challenge}
-                  key={`challenge-${index}`}
-                />
-              );
-            })}
+          {recentChallenges.slice(0, limit).map((challenge, index) => {
+            return (
+              <ChallengeCard challenge={challenge} key={`challenge-${index}`} />
+            );
+          })}
           <Link href="/challenges" className="mx-auto flex gap-1 nota accent-b">
             Show more <ArrowRight />
           </Link>
@@ -48,7 +44,7 @@ export default function Home() {
           <div className="bg-gray-900 border border-gray-200 rounded-md p-4 px-6">
             <h3 id="weakly-challenges">New challenge 🎯 every Wednesday...</h3>
           </div>
-          {weaklyChallenges.reverse().map((challenge, index) => {
+          {weaklyChallenges.map((challenge, index) => {
             return (
               <ChallengeCard challenge={challenge} key={`challenge-${index}`} />
             );
