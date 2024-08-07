@@ -16,7 +16,7 @@ export default function Home() {
     <main className="flex flex-col gap-14">
       <section>
         <div className="container flex flex-col gap-2 text-center items-center pt-24">
-          <h1>
+          <h1 className="text-6xl">
             rebuild<span className="underline text-gold">js</span>
           </h1>
           <p className="max-w-prose text-muted-foreground">
