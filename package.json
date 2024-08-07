@@ -16,6 +16,7 @@
     "nextjs-toploader": "^1.6.12",
     "react": "^18",
     "react-dom": "^18",
+    "shiki": "^1.12.1",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

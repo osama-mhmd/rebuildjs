@@ -97,3 +97,12 @@ button {
 .tip {
   @apply text-center text-muted-foreground font-bold;
 }
+
+.shiki > code {
+  @apply block p-3;
+}
+
+.shiki {
+  @apply overflow-x-auto rounded-xl border;
+  border-color: rgb(63 64 66);
+}
