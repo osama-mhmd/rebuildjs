@@ -94,6 +94,10 @@ button {
   @apply bg-gray-200 py-2 px-4 text-black rounded-md hover:bg-gray-200/90 transition;
 }
 
+ul {
+  @apply list-disc px-3;
+}
+
 .tip {
   @apply text-center text-muted-foreground font-bold;
 }
@@ -105,4 +109,13 @@ button {
 .shiki {
   @apply overflow-x-auto rounded-xl border;
   border-color: rgb(63 64 66);
+}
+
+.solution .shiki {
+  @apply my-2;
+  background-color: #111827 !important;
+}
+
+.solution ::-webkit-scrollbar-thumb {
+  @apply rounded-lg;
 }

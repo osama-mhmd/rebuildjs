@@ -1,4 +1,38 @@
 import Challenge from "@/challenge";
+import Code from "@/components/code";
+const linkChallenge = [
+  `document.querySelectorAll("a").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});`,
+  `fetch(el.href)
+  .then((data) => {
+    if (!data.ok) return;
+    return data.text();
+  })
+  .then((htmlcontent) => {
+    console.log(htmlcontent);
+  })
+  .catch((err) => {
+    console.log(err);
+  });`,
+  `.then((htmlcontent) => {
+  const main = htmlcontent.match(/<main>(.*?)<\/main>/)[1]; // optional step, if you want to replace the main tag only
+  const title = htmlcontent.match(/<title>(.*?)<\/title>/)[1];
+  // I used \`match()\` becasuse it is much faster than parsing it and then select the main tag
+
+  // update the History API
+  history.pushState({ content: main }, el.href);
+  document.querySelector("main").innerHTML = main;
+  document.querySelector("title").innerHTML = title;
+})`,
+  `window.addEventListener("popstate", (e) => {
+  if (e.state && e.state.content) {
+    document.querySelector("main").innerHTML = e.state.content;
+  }
+});`,
+];
 
 const challenges: Challenge[] = [
   {
@@ -47,6 +81,34 @@ const challenges: Challenge[] = [
       "After that, push the changes to the history",
     ],
     type: "storm",
+    solution: (
+      <div>
+        <ul>
+          <li>
+            Create three pages: <code>index.html</code> <code>about.html</code>{" "}
+            <code>login.html</code>.
+          </li>
+          <li>
+            Then create a simple navbar that have links to navigate between
+            pages.
+          </li>
+          <li>
+            And import the <code>main.js</code> script
+          </li>
+          <li>Then prevent the default action on clicking a link</li>
+          <Code text={linkChallenge[0]} />
+          <li>Then fetch the page you are going to</li>
+          <Code text={linkChallenge[1]} />
+          <li>After that replace the current content with the new content</li>
+          <Code text={linkChallenge[2]} />
+          <li>
+            Finally, make sure that when going back and forward, everything is
+            fine
+          </li>
+          <Code text={linkChallenge[3]} />
+        </ul>
+      </div>
+    ),
   },
   {
     name: "html2canvas",

@@ -1,16 +1,12 @@
-"use client";
-
 import challenges from "@/app/challenges";
+import Solution from "@/components/solution";
 import { SquareArrowOutUpRight } from "lucide-react";
-import { useState } from "react";
 
 export default function Challenge({
   params,
 }: {
   params: { challenge: string };
 }) {
-  const [solutionVisibilty, setSolutionVisibilty] = useState(false);
-
   const challenge = challenges.filter(
     (_challenge) => _challenge.name.replaceAll(" ", "-") == params.challenge
   )[0];
@@ -55,9 +51,9 @@ export default function Challenge({
           </div>
         </section>
         <section>
-          <div className="container py-4 my-6 bg-muted/50 sm:rounded-md">
+          <div className="container py-4 my-6 bg-muted/30 sm:rounded-md">
             <h2>Constrains</h2>
-            <ul className="list-disc px-2">
+            <ul>
               {challenge.steps.map((step, index) => {
                 return (
                   <li key={index} className="">
@@ -73,7 +69,7 @@ export default function Challenge({
             {challenge.hints && (
               <>
                 <h2>Hints</h2>
-                <ul className="list-disc px-4">
+                <ul>
                   {challenge.hints.map((hint, index) => {
                     return <li key={index}>{hint}</li>;
                   })}
@@ -86,18 +82,11 @@ export default function Challenge({
           </div>
         </section>
         <section>
-          <div className="container sm:rounded-md bg-muted/50 my-6 py-4">
+          <div className="container sm:rounded-md bg-muted/30 my-6 py-4 solution">
             {!challenge.solution && (
               <p className="tip">no solution for this challenge</p>
             )}
-            {challenge.solution && !solutionVisibilty && (
-              <div className="text-center">
-                <button onClick={() => setSolutionVisibilty(true)}>
-                  Show solution
-                </button>
-              </div>
-            )}
-            {solutionVisibilty && challenge.solution}
+            {challenge.solution && <Solution solution={challenge.solution} />}
           </div>
         </section>
       </main>
