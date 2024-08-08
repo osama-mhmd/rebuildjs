@@ -1,7 +1,7 @@
 import Challenge from "@/challenge";
 import Link from "next/link";
 import { AnchorHTMLAttributes } from "react";
-import { cn } from "@/utils";
+import { cn } from "@/utils/utils";
 
 type ChallengeCardProps = {
   challenge: {

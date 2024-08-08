@@ -1,7 +1,8 @@
 import challenges from "@/app/challenges";
+import code from "@/utils/code";
 import { SquareArrowOutUpRight } from "lucide-react";
 
-export default function Challenge({
+export default async function Challenge({
   params,
 }: {
   params: { challenge: string };
@@ -78,9 +79,15 @@ export default function Challenge({
               </>
             )}
             {!challenge.hints && (
-              <p className="text-center text-muted-foreground font-bold">
-                no hints for this problem
-              </p>
+              <p className="tip">no hints for this challenge</p>
+            )}
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <hr />
+            {!challenge.solution && (
+              <p className="tip">no solution for this challenge</p>
             )}
           </div>
         </section>
