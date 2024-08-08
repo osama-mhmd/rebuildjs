@@ -1,5 +1,5 @@
 import ChallengeCard from "@/components/challenge-card";
-import challenges from "./challenges";
+import challenges from "@/db/challenges";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 

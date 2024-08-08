@@ -1,4 +1,4 @@
-import challenges from "@/app/challenges";
+import challenges from "@/db/challenges";
 import Solution from "@/components/solution";
 import { SquareArrowOutUpRight } from "lucide-react";
 

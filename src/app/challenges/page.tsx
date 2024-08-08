@@ -1,6 +1,6 @@
 "use client";
 
-import challenges from "@/app/challenges";
+import challenges from "@/db/challenges";
 import ChallengeCard from "@/components/challenge-card";
 import { useRef, useState } from "react";
 
