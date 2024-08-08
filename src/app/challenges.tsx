@@ -92,7 +92,7 @@ const challenges: Challenge[] = [
   {
     name: "SPA",
     description:
-      'Single Page Application (SPA) is a website or web application that updates its content without reloading the whole page which improves the user experience a lot.',
+      "Single Page Application (SPA) is a website or web application that updates its content without reloading the whole page which improves the user experience a lot.",
     tags: ["routing", "rebuild-technique"],
     steps: [
       "Make accessing any route not reload the page",

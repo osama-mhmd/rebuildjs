@@ -1,12 +1,16 @@
-import challenges from "@/app/challenges";
-import code from "@/utils/code";
-import { SquareArrowOutUpRight } from "lucide-react";
+"use client";
 
-export default async function Challenge({
+import challenges from "@/app/challenges";
+import { SquareArrowOutUpRight } from "lucide-react";
+import { useState } from "react";
+
+export default function Challenge({
   params,
 }: {
   params: { challenge: string };
 }) {
+  const [solutionVisibilty, setSolutionVisibilty] = useState(false);
+
   const challenge = challenges.filter(
     (_challenge) => _challenge.name.replaceAll(" ", "-") == params.challenge
   )[0];
@@ -27,7 +31,7 @@ export default async function Challenge({
               )}
             </h1>
             {challenge.deps && (
-              <p className="text-red-500 text-center">
+              <p className="text-green-500 text-center">
                 We recommend to do these challenges at first:{" "}
                 {challenge.deps.map((dep, index) => {
                   return (
@@ -48,13 +52,12 @@ export default async function Challenge({
                 );
               })}
             </p>
-            <hr />
           </div>
         </section>
         <section>
-          <div className="container py-2">
+          <div className="container py-4 my-6 bg-muted/50 sm:rounded-md">
             <h2>Constrains</h2>
-            <ul className="list-disc px-4">
+            <ul className="list-disc px-2">
               {challenge.steps.map((step, index) => {
                 return (
                   <li key={index} className="">
@@ -67,7 +70,6 @@ export default async function Challenge({
         </section>
         <section>
           <div className="container">
-            <hr />
             {challenge.hints && (
               <>
                 <h2>Hints</h2>
@@ -84,14 +86,21 @@ export default async function Challenge({
           </div>
         </section>
         <section>
-          <div className="container">
-            <hr />
+          <div className="container sm:rounded-md bg-muted/50 my-6 py-4">
             {!challenge.solution && (
               <p className="tip">no solution for this challenge</p>
             )}
+            {challenge.solution && !solutionVisibilty && (
+              <div className="text-center">
+                <button onClick={() => setSolutionVisibilty(true)}>
+                  Show solution
+                </button>
+              </div>
+            )}
+            {solutionVisibilty && challenge.solution}
           </div>
         </section>
       </main>
     );
-  return "Challenge not found";
+  return <p className="pt-12 tip">Challenge not found</p>;
 }
