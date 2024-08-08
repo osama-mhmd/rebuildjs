@@ -53,7 +53,7 @@ export default function Challenge({
         <section>
           <div className="container py-4 my-6 bg-muted/30 sm:rounded-md">
             <h2>Constrains</h2>
-            <ul>
+            <ul className="list-none px-0 constrains">
               {challenge.steps.map((step, index) => {
                 return (
                   <li key={index} className="">

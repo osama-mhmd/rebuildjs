@@ -1,5 +1,6 @@
 import Challenge from "@/challenge";
 import Code from "@/components/code";
+
 const linkChallenge = [
   `document.querySelectorAll("a").forEach((el) => {
   el.addEventListener("click", (e) => {
@@ -79,6 +80,7 @@ const challenges: Challenge[] = [
       "Make a component the prefetches the page you are going to",
       "Then, try to replace the content of the current page with the new content",
       "After that, push the changes to the history",
+      "And make sure that it's working when navigating from the browser",
     ],
     type: "storm",
     solution: (
@@ -147,21 +149,12 @@ const challenges: Challenge[] = [
     description:
       'The new routing technique in nextjs is app routing where the main page ("/") found in "/app/page.tsx" and the about page ("/about") in "/app/about/page.tsx"',
     tags: ["routing", "file-system", "rebuild-technique"],
-    steps: ["..."],
-    type: "storm",
-    link: "https://freecodecamp.org/news/routing-in-nextjs/",
-  },
-  {
-    name: "SPA",
-    description:
-      "Single Page Application (SPA) is a website or web application that updates its content without reloading the whole page which improves the user experience a lot.",
-    tags: ["routing", "rebuild-technique"],
     steps: [
-      "Make accessing any route not reload the page",
-      "Replace the current content with the new content without reloading",
+      "Read `page.tsx` | `page.jsx` file in the app/ directory and the directories inside",
+      "Make automatic route for each folder",
     ],
     type: "storm",
-    weaklyChallenge: 1,
+    link: "https://freecodecamp.org/news/routing-in-nextjs/",
   },
 ];
 

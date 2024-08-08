@@ -119,3 +119,7 @@ ul {
 .solution ::-webkit-scrollbar-thumb {
   @apply rounded-lg;
 }
+
+.constrains li {
+  @apply p-3 bg-gray-800/50 mb-2 rounded-md;
+}
