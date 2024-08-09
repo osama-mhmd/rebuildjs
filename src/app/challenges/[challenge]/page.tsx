@@ -2,11 +2,15 @@ import challenges from "@/db/challenges";
 import Solution from "@/components/solution";
 import { SquareArrowOutUpRight } from "lucide-react";
 
-export default function Challenge({
-  params,
-}: {
-  params: { challenge: string };
-}) {
+type Params = { challenge: string };
+
+export function generateMetadata({ params }: { params: Params }) {
+  return {
+    title: params.challenge,
+  };
+}
+
+export default function Challenge({ params }: { params: Params }) {
   const challenge = challenges.filter(
     (_challenge) => _challenge.name.replaceAll(" ", "-") == params.challenge
   )[0];
